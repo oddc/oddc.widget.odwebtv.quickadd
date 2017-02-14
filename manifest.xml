@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="oddc.widget.odwebtv.quickadd" builder="2.2.0">
+    <information>
+        <name lang="de-DE">odWeb.tv quickAdd</name>
+        <version>0.0.23</version>
+        <author>
+            <company>opta data Gruppe</company>
+            <telephone>0201 / 3 19 60</telephone>
+            <fax>0201 / 3 19 62 22</fax>
+            <email>service@optadata-gruppe.de</email>
+            <web>http://www.optadata-gruppe.de</web>
+        </author>
+        <summary lang="de-DE">
+            <image>/resources/images/odwebtv.png</image>
+            <text type="textile">
+                Folien zu einer odWeb.tv Präsentation hinzufügen.
+            </text>
+        </summary>
+        <description lang="de-DE">
+            <image>/resources/images/odwebtv.png</image>
+            <text type="textile">
+                Fügen Sie mit dem odWeb.tv quickAdd Widget schnell und einfach neue Folien einer ausgewählten Präsentation hinzu.
+            </text>
+        </description>
+        <tags>kostenlos,opta data,odweb,odweb.tv,oddc,opta data digital communication</tags>
+        <appearance>
+            <text-appearance>light</text-appearance>
+            <main-color>#702282</main-color>
+        </appearance>
+        <links>
+            <link environment="DEV" title="Zum Produkt" link="http://dev.odweb.tv/admin/oam.htm"></link>
+            <link environment="PROD" title="Zum Produkt" link="http://www.odweb.tv/admin/oam.htm"></link>
+        </links>
+    </information>
+    <ressources>
+        <templates lang="de-DE">
+            <template cols="1" rows="1" markup="/src/app.html">
+                <styles>
+                    <style>/src/components/upload.component/upload.component.css</style>
+                    <style>/src/components/upload.component/dropzone.component/dropzone.component.css</style>
+                    <style>/src/app.css</style>
+                </styles>
+                <scripts>
+                    <script>/resources/libs/ng-file-upload/ng-file-upload.min.js</script>
+                    <script>/src/app.js</script>
+                    <script>/src/components/upload.component/upload.component.js</script>
+                    <script>/src/components/upload.component/authentication.service/authentication.service.js</script>
+                    <script>/src/components/upload.component/dropzone.component/dropzone.component.js</script>
+                    <script>/src/components/upload.component/presentation.service/presentation.service.js</script>
+                    <script>/src/components/error.component/error.component.js</script>
+                </scripts>
+            </template>
+        </templates>
+        <services>
+            <service environment="DEV" type="restful" name="quickadd" url="http://dev.odweb.tv/publicService/quickadd" method="POST"></service>
+            <service environment="DEV" type="restful" name="authenticate" url="http://dev.odweb.tv/publicService/authOne" method="GET"></service>
+            <service environment="DEV" type="restful" name="getPresentations" url="http://dev.odweb.tv/publicService/getPresentations" method="POST"></service>
+            <service environment="PROD" type="restful" name="quickadd" url="http://www.odweb.tv/publicService/quickadd" method="POST"></service>
+            <service environment="PROD" type="restful" name="authenticate" url="http://www.odweb.tv/publicService/authOne" method="GET"></service>
+            <service environment="PROD" type="restful" name="getPresentations" url="http://www.odweb.tv/publicService/getPresentations" method="POST"></service>
+        </services>
+    </ressources>
+</widget>
+

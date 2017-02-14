@@ -1,0 +1,8 @@
+.upload-preferences {
+    display: flex;
+    justify-content: flex-start;
+}
+.upload-preferences .form-control {
+    width:auto;
+    margin-right:20px;
+}

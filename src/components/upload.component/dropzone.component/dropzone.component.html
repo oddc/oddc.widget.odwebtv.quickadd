@@ -1,0 +1,38 @@
+<div class="uploader-dropzone">
+
+    <div class="uploader-dropzone-droparea"
+         ng-disabled="dropzoneController.isUploading || dropzoneController.uploadReady || dropzoneController.errorMessage"
+         ngf-multiple="false"
+         ngf-drag-over-class="dragover"
+         ngf-pattern="'.jpg,.jpeg,.png'"
+         ngf-accept="'.jpg,.jpeg,.png'"
+         ngf-fix-orientation="true"
+         ngf-drop="dropzoneController.upload($file)"
+         ngf-select="dropzoneController.upload($file)"
+    >
+        <div ng-if="!dropzoneController.isUploading && !dropzoneController.uploadReady && !dropzoneController.errorMessage" class="uploader-dropzone-message">
+            Bitte ziehen Sie eine Grafik (*.jpg, *.png) auf diese Fläche um sie der oben gewählten Präsentation hinzuzufügen.
+        </div>
+
+        <div ng-if="dropzoneController.uploadReady" class="uploader-dropzone-message">
+            <div style="font-size:26px;" class="icon-widget-check"></div>
+            Upload fertig
+        </div>
+
+        <div ng-if="dropzoneController.errorMessage" class="uploader-dropzone-message">
+            <div class="animated shake" style="text-align:center;">
+                <div style="font-size:26px;" class="icon-widget-close"></div>
+                Dateityp nicht erlaubt.
+                <div style="font-size:10px;">Erlaubte Dateitypen: *.jpg, *.png</div>
+            </div>
+        </div>
+
+        <div ng-if="dropzoneController.isUploading" class="uploader-dropzone-message">
+            <!--od-loader></od-loader-->
+            <img style="margin-bottom:20px;" class="animated flip infinite" ngf-src="dropzoneController.file" ngf-resize="{width: 100, height: 100, quality: 0.9}" />
+            Bitte warten&hellip;
+        </div>
+
+    </div>
+    <uib-progressbar ng-if="dropzoneController.isUploading" class="uploader-progressbar" max="100" value="dropzoneController.progress">{{ dropzoneController.progress }}%</uib-progressbar>
+</div>

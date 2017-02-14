@@ -1,0 +1,31 @@
+<od-widget widget-title="odWeb.tv QuickAdd" template="tpl-small-header" icon="resources/images/icon.svg">
+    <od-widget-header>
+        <select class="form-control"
+                ng-model="uploadController.selectedPresentation"
+                ng-options="pres as pres.pr_name for pres in uploadController.presentationList track by pres.pr_id"
+                ng-change="uploadController.saveProperties()">
+        </select>
+    </od-widget-header>
+    <od-widget-content>
+        <dropzone duration="uploadController.selectedDuration" effect="uploadController.selectedEffect" presentation-id="uploadController.selectedPresentation.pr_id"></dropzone>
+    </od-widget-content>
+
+    <od-widget-footer>
+        <div class="upload-preferences">
+            <select class="form-control" ng-model="uploadController.selectedDuration" ng-change="uploadController.saveProperties()">
+                <option value="5">5 Sek.</option>
+                <option value="10">10 Sek.</option>
+                <option value="15">15 Sek.</option>
+                <option value="20">20 Sek.</option>
+                <option value="30">30 Sek.</option>
+            </select>
+            <select class="form-control" ng-model="uploadController.selectedEffect" ng-change="uploadController.saveProperties()">
+                <option value="fade">Überblenden</option>
+                <option value="left">Einblenden von links</option>
+                <option value="right">Einblenden von rechts</option>
+                <option value="top">Einblenden von oben</option>
+                <option value="bottom">Einblenden von unten</option>
+            </select>
+        </div>
+    </od-widget-footer>
+</od-widget>
