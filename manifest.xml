@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget id="oddc.widget.odwebtv.quickadd" builder="2.3.2">
+<widget id="oddc.widget.odwebtv.quickadd" builder="3.0.0">
     <information>
         <name lang="de-DE">odWeb.tv quickAdd</name>
-        <version>0.0.24</version>
+        <version>0.0.26</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
@@ -10,6 +10,10 @@
             <email>service@optadata-gruppe.de</email>
             <web>http://www.optadata-gruppe.de</web>
         </author>
+        <developer>
+            <name>Dennis Lehmann</name>
+            <email>d.lehmann@optadata-gruppe.de</email>
+        </developer>
         <summary lang="de-DE">
             <image>/resources/images/odwebtv.png</image>
             <text type="textile">
@@ -29,6 +33,7 @@
         </appearance>
         <links>
             <link environment="DEV" title="Zum Produkt" link="http://dev.odweb.tv/admin/oam.htm"></link>
+            <link environment="TEST" title="Zum Produkt" link="http://dev.odweb.tv/admin/oam.htm"></link>
             <link environment="PROD" title="Zum Produkt" link="http://www.odweb.tv/admin/oam.htm"></link>
         </links>
     </information>
@@ -52,6 +57,9 @@
             </template>
         </templates>
         <services>
+            <service environment="TEST" type="restful" name="quickadd" url="http://dev.odweb.tv/publicService/quickadd" method="POST"></service>
+            <service environment="TEST" type="restful" name="authenticate" url="http://dev.odweb.tv/publicService/authOne" method="GET"></service>
+            <service environment="TEST" type="restful" name="getPresentations" url="http://dev.odweb.tv/publicService/getPresentations" method="POST"></service>
             <service environment="DEV" type="restful" name="quickadd" url="http://dev.odweb.tv/publicService/quickadd" method="POST"></service>
             <service environment="DEV" type="restful" name="authenticate" url="http://dev.odweb.tv/publicService/authOne" method="GET"></service>
             <service environment="DEV" type="restful" name="getPresentations" url="http://dev.odweb.tv/publicService/getPresentations" method="POST"></service>
