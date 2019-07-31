@@ -2,7 +2,7 @@
 <widget id="oddc.widget.odwebtv.quickadd" builder="3.0.0">
     <information>
         <name lang="de-DE">odWeb.tv quickAdd</name>
-        <version>0.0.26</version>
+        <version>0.0.27</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
