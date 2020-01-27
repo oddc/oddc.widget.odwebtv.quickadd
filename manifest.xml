@@ -2,12 +2,13 @@
 <widget id="oddc.widget.odwebtv.quickadd" builder="3.0.0" icon="/ressources/images/icon.png">
     <information>
         <name lang="de-DE">odWeb.tv quickAdd</name>
-        <version>0.0.28</version>
+        <version>0.0.30</version>
         <author>
+            <name>opta data digital communication GmbH</name>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
             <fax>0201 / 3 19 62 22</fax>
-            <email>service@optadata-gruppe.de</email>
+            <email>info@odWeb.tv</email>
             <web>http://www.optadata-gruppe.de</web>
         </author>
         <developer>
@@ -36,13 +37,15 @@
             <link environment="TEST" title="Zum Produkt" link="http://dev.odweb.tv/admin/oam.htm"></link>
             <link environment="PROD" title="Zum Produkt" link="http://www.odweb.tv/admin/oam.htm"></link>
         </links>
-        <helptext lang="de-DE">
-            Alle odWeb.tv Widgets zeigen wichtige Informationen aus Ihrem odWeb.tv auf einen Blick an.
-            Damit Sie die Vorteile des Widgets nutzen können, müssen Sie opta data one mit Ihrem odWeb.tv-Zugang verknüpfen.
-            Klicken Sie dazu auf den „zum Produkt“-Link und folgen den Anweisungen auf der sich öffnenden Seite.
-            Das Widget zeigt gegebenenfalls keine Inhalte an, wenn in Ihrem odWeb.tv Account keine Präsentationen angelegt sind.
-        </helptext>
-        <image>/ressources/images/odwebtv.png</image>
+		<tutorial>
+			<helptext lang="de-DE">
+				Alle odWeb.tv Widgets zeigen wichtige Informationen aus Ihrem odWeb.tv auf einen Blick an.
+				Damit Sie die Vorteile des Widgets nutzen können, müssen Sie opta data one mit Ihrem odWeb.tv-Zugang verknüpfen.
+				Klicken Sie dazu auf den „zum Produkt“-Link und folgen den Anweisungen auf der sich öffnenden Seite.
+				Das Widget zeigt gegebenenfalls keine Inhalte an, wenn in Ihrem odWeb.tv Account keine Präsentationen angelegt sind.
+			</helptext>
+			<image>/ressources/images/odwebtv.png</image>
+		</tutorial>
     </information>
     <ressources>
         <templates lang="de-DE">
